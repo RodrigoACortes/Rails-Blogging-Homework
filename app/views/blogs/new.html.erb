@@ -1,0 +1,17 @@
+<h1>New Article</h1>
+
+<%= form_with scope: :blog, url: blogs_path, local: true do |b| %>
+  <p>
+    <%= b.label :title %><br>
+    <%= b.text_field :title %>
+  </p>
+
+  <p>
+    <%= b.label :content %><br>
+    <%= b.text_area :content %>
+  </p>
+
+  <p>
+    <%= b.submit %>
+  </p>
+<% end %>
